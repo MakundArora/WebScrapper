@@ -1,9 +1,4 @@
-services:
-  - type: web
-    name: webscrapper-service
-    env: java
-    buildCommand: "./mvnw clean package -DskipTests"
-    startCommand: "java -jar target/WebScrapper-0.0.1-SNAPSHOT.jar"
-    envVars:
-      - key: GROQ_API_KEY
-        value: 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
+envVars:
+  - key: GROQ_API_KEY
+    fromDatabase: false # Optional
+    sync: false # Optional
